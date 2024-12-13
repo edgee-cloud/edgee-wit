@@ -1,4 +1,4 @@
-package edgee:protocols@0.2.3;
+package edgee:protocols@0.2.1; // actually 0.2.3, testing release
 
 world data-collection {
     export provider: interface {
