@@ -1,8 +1,6 @@
-package edgee:protocols@0.2.1; // actually 0.2.3, testing release
-// force a change
-world data-collection {
-    export provider: interface {
-        type dict = list<tuple<string,string>>;
+package edgee:protocols@0.2.3;
+interface provider {
+    type dict = list<tuple<string,string>>;
 
         enum event-type { page, track, user }
         enum consent { pending, granted, denied }
