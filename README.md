@@ -21,8 +21,19 @@ Run it:
 wit-deps
 ```
 
-That should download and unpack all dependencies into the wit/deps/ folder
+This original wit file has no dependencies for now, so the the deps.toml and deps.lock remain empty.
 
-So first we will need to create such an artifact from our protocols.wit
+## Releasing
+- Update the wit as desired.
+- Update the package header of the protocols.wit file to represent the new version.
+- Add and commit
+- Tag the version e.g. 'git tag v0.2.3'
+- Push the tags 'git push --tags'
+- On github.com, draft a new release pointing to this tag
+- Copy the url link to the release
 
-Second we should create dependencies to it, and remove the wit files from all other repo;s
+Adopting the new version on downstream projects:
+- Update the deps.toml file to point to your new release.
+- Update the wit/world.wit to match the version
+- Run wit-deps in its crate folder
+- Resolve any compilation issues
