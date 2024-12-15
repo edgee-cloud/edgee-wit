@@ -25,7 +25,6 @@ This original wit file has no dependencies for now, so the the deps.toml and dep
 
 ## Releasing
 - Update the wit as desired.
-- Update the package header of the protocols.wit file to represent the new version.
 - Add and commit
 - Tag the version e.g. 'git tag v0.2.3'
 - Push the tags 'git push --tags'
