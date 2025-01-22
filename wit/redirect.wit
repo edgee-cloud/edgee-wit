@@ -1,0 +1,7 @@
+package edgee:protocols;
+
+interface redirect {
+    type config = list<tuple<string,string>>;
+
+    redirect: func(path: string, config: config) -> option<string>;
+}
