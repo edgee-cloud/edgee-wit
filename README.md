@@ -1,27 +1,38 @@
-In the WASM community there is some tooling for it: wit-deps.
+# Edgee WIT definitions
 
-Wit-deps is a dependency tool, native to wasm. It expects a 'deps.toml' file in the wit folder, listing url's to dependent wit archives.
+This repository defines all WIT definitions for Edgee components.
 
-Example contents of a deps.toml file:
+## How to use
+
+Add this to your `wit/deps.toml` file:
 
 ```toml
-io = "https://github.com/WebAssembly/wasi-io/archive/main.tar.gz"
+edgee="https://github.com/edgee-cloud/edgee-wit/archive/refs/tags/v0.4.0.tar.gz"
 ```
 
-In this case there is a dependency called 'io' pointing to a tgz of the wasi-io
+And your `wit/world.wit` file:
 
-To use wit-deps, install it first:
+```
+package edgee:native;
+
+world data-collection {
+  export edgee:components/data-collection;
+}
+```
+
+## Requirements
+
+You need to install `wit-deps`:
 
 ```bash
 cargo install wit-deps-cli
 ```
-Run it:
+
+And then run it to install all WIT dependencies:
 
 ```bash
 wit-deps
 ```
-
-This original wit file has no dependencies for now, so the the deps.toml and deps.lock remain empty.
 
 ## Releasing
 - Update the wit as desired.
