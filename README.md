@@ -7,7 +7,7 @@ This repository defines all WIT definitions for Edgee components.
 Add this to your `wit/deps.toml` file:
 
 ```toml
-edgee = "https://github.com/edgee-cloud/edgee-wit/archive/refs/tags/v0.4.0.tar.gz"
+edgee = "https://github.com/edgee-cloud/edgee-wit/archive/refs/tags/v1.0.0.tar.gz"
 ```
 
 And your `wit/world.wit` file:
