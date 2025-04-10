@@ -9,5 +9,5 @@ interface consent-mapping {
         denied,
     }
 
-    map: func(cookie: string, settings: dict) -> option<consent>;
+    map: func(cookies: dict, settings: dict) -> option<consent>;
 }
