@@ -112,6 +112,7 @@ interface data-collection {
         headers: dict,
         forward-client-headers: bool,
         token-duration: s64,
+        token-response-property: string,
         body: string,
     }
 
